@@ -58,7 +58,7 @@ public class ServerIntegrationService {
                     HttpMethod.GET,
                     new HttpEntity<>(new HttpHeaders()),
                     EmployeeById.class);
-            return responseEntity.getBody().getData();
+            return Objects.requireNonNull(responseEntity.getBody()).getData();
     }
 
     /**
