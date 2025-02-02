@@ -94,6 +94,6 @@ public class ServerIntegrationService {
                     HttpMethod.DELETE,
                     requestEntity,
                     DeleteEmployeeResponse.class);
-            return Objects.requireNonNull(responseEntity.getBody());
+            return responseEntity.getBody();
     }
 }
